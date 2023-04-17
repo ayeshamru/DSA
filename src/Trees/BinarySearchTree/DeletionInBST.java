@@ -42,10 +42,24 @@ public class DeletionInBST {
         }
 
     }
+    void deleteNode(int element){
+        temp = root;
+        Node parent = null;
+        if(element < temp.data){
+            parent = temp;
+            temp = temp.left;
+        }else if(element > temp.data){
+            parent = temp;
+            temp = temp.right;
+        }else if(element == temp.data){
+
+        }
+    }
     public static void main(String[] args) {
         DeletionInBST tree = new DeletionInBST();
         tree.createTree();
         tree.displayLevelOrderTraversal();
+        tree.deleteNode(600);
 
     }
 
